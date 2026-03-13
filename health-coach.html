@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Integrated Therapy - Health Coaching</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/apple-icon.png">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+</head>
+
+<body>
+    <!-- Top Contact & Social Bar (kept visible on desktop) -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark d-none d-lg-block" id="templatemo_nav_top">
+        <div class="container text-light">
+            <div class="w-100 d-flex justify-content-between align-items-center">
+                <div>
+                    <i class="fa fa-envelope mx-2"></i>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:info@mcnutraceutical.co.uk">info@mcnutraceutical.co.uk</a>
+                    <i class="fa fa-phone mx-2"></i>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="tel:+447993349777">+44 799 334 9777</a>
+                </div>
+                <div class="social-links">
+                    <a class="text-light me-2" href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="text-light me-2" href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="text-light me-2" href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="text-light" href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Navigation - FIXED TOP -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand text-light fw-bold fs-3" href="index.html">
+                Integrated Therapy
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="templatemo_main_nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="templatemo_main_nav">
+                <ul class="navbar-nav mx-lg-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle text-light" 
+       href="pharmacy2.html" 
+       id="pharmacyDropdown" 
+       role="button" 
+       data-bs-toggle="dropdown" 
+       aria-expanded="false">
+        Pharmacy
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="pharmacyDropdown">
+        <!-- Add your dropdown items here -->
+        <li><a class="dropdown-item" href="pharmacy2.html">Main Pharmacy Page</a></li>
+        <li><a class="dropdown-item" href="medicines.html">Medicines</a></li>
+        <li><a class="dropdown-item" href="consultation.html">Online Consultation</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="contact-pharmacy.html">Contact Pharmacy</a></li>
+    </ul>
+</li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+
+                <!-- Icons & Search (right side) -->
+                <div class="d-flex align-items-center ms-lg-4">
+                    <!-- Search (desktop modal trigger) -->
+                    <a class="nav-icon d-none d-lg-inline me-3" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+                        <i class="fa fa-search text-light"></i>
+                    </a>
+
+                    <!-- Cart -->
+                    <a class="nav-icon position-relative text-decoration-none me-3" href="Cart.html">
+                        <i class="fa fa-cart-arrow-down text-light"></i>
+                        <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">0</span>
+                    </a>
+
+                    <!-- User -->
+                    <a class="nav-icon position-relative text-decoration-none" href="#">
+                        <i class="fa fa-user text-light"></i>
+                        <span id="user-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary" style="display:none;"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+<!-- End Header -->
+
+    <!-- Modal -->
+    <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="w-100 pt-1 mb-5 text-right">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="" method="get" class="modal-content modal-body border-0 p-0">
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+                    <button type="submit" class="input-group-text bg-success text-light">
+                        <i class="fa fa-fw fa-search text-white"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <section class="bg-success py-5">
+        <div class="container">
+            <div class="row align-items-center py-5">
+                <div class="col-md-8 text-white">
+                    <h1>HEALTH COACH</h1>
+                    <p>
+                        We provide compassionate, ongoing coaching and support at every stage of your health journey — regardless of where you are in your wellness path. Our dedicated coaches guide you with personalized strategies for lifestyle changes, effective medicine and supplement management, and sustainable habits that empower you to thrive with confidence and vitality. 
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <img src="assets/img/about-hero.svg" alt="About Hero">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Close Banner -->
+
+    <!-- Start Health Coach Section -->
+<section class="health-coach-section py-5 bg-light">
+    <div class="container">
+        <!-- Header -->
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-9">
+                <h1 class="display-5 fw-bold text-success mb-4">Health Coach Services</h1>
+                <p class="lead text-muted">
+                    Led by Dr. John Osuku Opio — a qualified pharmacist with profound expertise in integrative medicine, herbal therapeutics, and patient-centered care — we offer dedicated health coaching to support individuals at every stage of their wellness journey. From prevention and early intervention to managing chronic conditions or optimizing recovery, our coaching empowers you with knowledge, motivation, and practical strategies.
+                </p>
+                <p class="text-muted">
+                    We provide personalized, ongoing support tailored to your current health status. This includes clear, actionable advice on lifestyle choices, nutrition, stress management, exercise, sleep, and — most importantly — effective health and medicine management, whether using natural remedies, conventional medications, or a synergistic combination of both.
+                </p>
+            </div>
+        </div>
+        <!-- Main Content: Carousel + Details -->
+        <div class="row g-5 align-items-start">
+            <!-- Left: Image Carousel & Thumbnails -->
+            <div class="col-lg-5">
+                <!-- Main Product Image -->
+                <div class="card border-0 shadow-lg rounded-4 overflow-hidden mb-4">
+                    <img
+                        id="main-product-image"
+                        src="assets/img/detox protocol.png"
+                        class="card-img img-fluid w-100"
+                        alt="Health Coaching - Personalized Support & Medicine Management"
+                    >
+                </div>
+                <!-- Thumbnail Carousel (multi-item) -->
+                <div class="carousel-wrapper position-relative">
+                    <div id="thumbnailCarousel" class="carousel slide" data-bs-ride="false">
+                        <div class="carousel-inner" role="listbox">
+                            <!-- Slide 1 -->
+                            <div class="carousel-item active">
+                                <div class="row g-2">
+                                    <div class="col-4">
+                                        <img src="assets/img/selamino modulator complex.png" class="img-fluid thumbnail rounded-3 shadow-sm" alt="One-on-One Health Coaching" data-full="assets/img/health-coaching-session.jpg">
+                                    </div>
+                                    <div class="col-4">
+                                        <img src="assets/img/detox modulator complex.png" class="img-fluid thumbnail rounded-3 shadow-sm" alt="Personalized Wellness Plan" data-full="assets/img/lifestyle-plan.jpg">
+                                    </div>
+                                    <div class="col-4">
+                                        <img src="assets/img/magnesium modulator complex.png" class="img-fluid thumbnail rounded-3 shadow-sm" alt="Medicine & Supplement Guidance" data-full="assets/img/medication-management.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="carousel-item">
+                                <div class="row g-2">
+                                    <div class="col-4">
+                                        <img src="assets/img/detox protocol.png" class="img-fluid thumbnail rounded-3 shadow-sm" alt="Patient Empowerment Discussion" data-full="assets/img/patient-empowerment.jpg">
+                                    </div>
+                                    <div class="col-4">
+                                        <img src="assets/img/tumeric modulator complex.png" class="img-fluid thumbnail rounded-3 shadow-sm" alt="Nutrition & Lifestyle Coaching" data-full="assets/img/nutrition-coaching.jpg">
+                                    </div>
+                                    <div class="col-4">
+                                        <img src="assets/img/vit d3 & k2 modulator complex.png" class="img-fluid thumbnail rounded-3 shadow-sm" alt="Support for Chronic Health" data-full="assets/img/chronic-condition-support.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="carousel-item">
+                                <div class="row g-2">
+                                    <div class="col-4">
+                                        <img src="assets/img/detox protocol.png" class="img-fluid thumbnail rounded-3 shadow-sm" alt="Health Goal Setting" data-full="assets/img/goal-setting.jpg">
+                                    </div>
+                                    <div class="col-4">
+                                        <img src="assets/img/zinc modulator complex.png" class="img-fluid thumbnail rounded-3 shadow-sm" alt="Integrative Health Coaching" data-full="assets/img/integrative-care.jpg">
+                                    </div>
+                                    <div class="col-4">
+                                        <img src="assets/img/magnesium modulator complex.png" class="img-fluid thumbnail rounded-3 shadow-sm" alt="Ongoing Motivational Guidance" data-full="assets/img/motivational-support.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Controls -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#thumbnailCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon bg-dark bg-opacity-50 rounded-circle p-3" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#thumbnailCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon bg-dark bg-opacity-50 rounded-circle p-3" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Right: Details & Call to Action -->
+            <div class="col-lg-7">
+                <div class="card border-0 shadow-lg rounded-4 h-100">
+                    <div class="card-body p-4 p-lg-5">
+                        <h2 class="h3 fw-bold text-success mb-4">Health Coaching Details</h2>
+                        <p class="text-muted mb-4">
+                            Our health coaching is compassionate, evidence-informed, and fully personalized. We meet you where you are — supporting prevention, acute needs, chronic condition management, or post-treatment recovery — while providing clear, practical guidance to help you take control of your health and medicine use.
+                        </p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-3"><i class="fas fa-check-circle text-success me-3"></i>Ongoing coaching tailored to your current health status and goals</li>
+                            <li class="mb-3"><i class="fas fa-check-circle text-success me-3"></i>Personalized advice on lifestyle, nutrition, movement, and stress management</li>
+                            <li class="mb-3"><i class="fas fa-check-circle text-success me-3"></i>Expert guidance on medicine and supplement management (herbal & conventional)</li>
+                            <li class="mb-3"><i class="fas fa-check-circle text-success me-3"></i>Strategies to improve adherence, minimize interactions, and maximize benefits</li>
+                            <li class="mb-3"><i class="fas fa-check-circle text-success me-3"></i>Support for integrative approaches combining natural and conventional care</li>
+                            <li class="mb-3"><i class="fas fa-check-circle text-success me-3"></i>Motivation, accountability, and empowerment throughout your journey</li>
+                        </ul>
+                        <!-- Simplified Action Form -->
+                        <form action="" method="POST" class="mt-5">
+                            <h6 class="fw-bold mb-3">Start Your Health Coaching Journey</h6>
+                            <div class="mb-4">
+                                <label for="coachingFocus" class="form-label">Primary Coaching Focus</label>
+                                <select class="form-select form-select-lg" id="coachingFocus" name="coaching-focus">
+                                    <option selected>Choose...</option>
+                                    <option value="general-wellness">General Wellness & Prevention</option>
+                                    <option value="chronic-management">Chronic Condition Management</option>
+                                    <option value="medicine-optimization">Medicine & Supplement Management</option>
+                                    <option value="lifestyle-change">Lifestyle & Habit Change</option>
+                                    <option value="recovery-support">Post-Treatment / Recovery Support</option>
+                                    <option value="other">Other / Custom Need</option>
+                                </select>
+                            </div>
+                            <div class="d-grid gap-3 d-md-flex justify-content-md-start">
+                                <a href="consultation-booking.html" class="btn btn-success btn-lg px-5">
+                                    <i class="fas fa-calendar-check me-2"></i> Book Coaching Session
+                                </a>
+                                <a href="contact.html" class="btn btn-outline-success btn-lg px-5">
+                                    <i class="fas fa-envelope me-2"></i> Inquire About Coaching
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Health Coach Section -->
+
+<!-- Final CTA -->
+<section class="bg-success text-white text-center py-5">
+    <div class="container">
+        <h2 class="display-5 fw-bold mb-4">Ready to Start Your Wellness Journey?</h2>
+        <p class="lead mb-4">Book your consultation today or explore our pharmacy – your health is our priority.</p>
+        <div class="d-flex justify-content-center gap-4 flex-wrap">
+            <a href="consulation-booking.html" class="btn btn-light btn-lg px-5">Book Now</a>
+            <a href="contact.html" class="btn btn-outline-light btn-lg px-5">Contact Us</a>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Start Modern Footer -->
+<footer class="bg-dark text-light pt-5 pb-4" id="footer">
+    <div class="container">
+        <div class="row g-5">
+
+            <!-- Column 1: Brand & Contact -->
+            <div class="col-lg-4 col-md-6">
+                <h3 class="h3 fw-bold text-success mb-4">Integrated Therapy</h3>
+                <p class="text-white mb-4">
+                    Holistic wellness through integrated therapy, premium nutraceuticals, and personalized care.
+                </p>
+                <ul class="list-unstyled footer-contact">
+                    <li class="mb-3 text-white">
+                        <i class="fas fa-map-marker-alt me-3 text-success"></i>
+                        United Kingdom
+                    </li>
+                    <li class="mb-3">
+                        <i class="fas fa-phone-alt me-3 text-success"></i>
+                        <a href="tel:+(44)799-334-9777" class="text-light text-decoration-none">+(44)799-334-9777</a>
+                    </li>
+                    <li class="mb-3">
+                        <i class="fas fa-envelope me-3 text-success"></i>
+                        <a href="mailto:info@mcnutraceutical.co.uk" class="text-light text-decoration-none">info@mcnutraceutical.co.uk</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="col-lg-2 col-md-6">
+                <h5 class="fw-bold mb-4">Quick Links</h5>
+                <ul class="list-unstyled footer-links">
+                    <li class="mb-2"><a href="index.html" class="text-light text-decoration-none hover-link">Home</a></li>
+                    <li class="mb-2"><a href="about.html" class="text-light text-decoration-none hover-link">About Us</a></li>
+                    <li class="mb-2"><a href="pharmacy2.html" class="text-light text-decoration-none hover-link">Pharmacy</a></li>
+                    <li class="mb-2"><a href="about.html#services" class="text-light text-decoration-none hover-link">Services</a></li>
+                    <li class="mb-2"><a href="contact.html" class="text-light text-decoration-none hover-link">Contact</a></li>
+                    <li class="mb-2"><a href="ppolicy.html" class="text-light text-decoration-none hover-link">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Products -->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="fw-bold mb-4">Our Products</h5>
+                <ul class="list-unstyled footer-links">
+                    <li class="mb-2"><a href="vit-modulator-complex.html" class="text-light text-decoration-none hover-link">Vitamin D3 & K2</a></li>
+                    <li class="mb-2"><a href="magnesium-modulator-complex.html" class="text-light text-decoration-none hover-link">Magnesium Complex</a></li>
+                    <li class="mb-2"><a href="detox-protocol.html" class="text-light text-decoration-none hover-link">Detox Protocol</a></li>
+                    <li class="mb-2"><a href="selamino-modulator-complex.html" class="text-light text-decoration-none hover-link">Selamino</a></li>
+                    <li class="mb-2"><a href="detox-modulator-complex.html" class="text-light text-decoration-none hover-link">Detox Modulator Complex</a></li>
+                    <li class="mb-2"><a href="pharmacy2.html" class="text-light text-decoration-none hover-link">All Supplements</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Newsletter & Social -->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="fw-bold mb-4">Stay Updated</h5>
+                <p class="text-white mb-3">Subscribe to get health tips & exclusive offers.</p>
+                
+                <form id="newsletterForm" class="input-group mb-4">
+                    <input type="email" id="newsletterEmail" class="form-control bg-dark border-secondary text-success" placeholder="Your email" aria-label="Your email" required>
+                    <button class="btn btn-success" type="submit">Subscribe</button>
+                </form>
+                <div id="newsletterAlert" class="alert d-none alert-sm mb-3" role="alert" style="font-size: 0.85rem;"></div>
+
+                <h6 class="fw-bold mb-3">Follow Us</h6>
+                <div class="social-icons d-flex gap-3">
+                    <a href="http://facebook.com/" class="text-light fs-4 social-icon" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" class="text-light fs-4 social-icon" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/" class="text-light fs-4 social-icon" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" class="text-light fs-4 social-icon" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="bg-black py-4 mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="mb-0 text-white">
+                        © 2026 Integrated Therapy UK Ltd. All rights reserved.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0 text-muted">
+                        Designed & Developed by 
+                        <a href="https://otbpro.co.ug" target="_blank" class="text-success text-decoration-none">OTB PRO</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Modern Footer -->
+
+    <!-- Placeholder Text Color -->
+    <style>
+        #newsletterEmail::placeholder {
+            color: inherit !important;
+            opacity: 1;
+        }
+    </style>
+
+    <!-- Start Script -->
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/templatemo.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <!-- End Script -->
+     <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    const mainImage = document.getElementById('main-product-image');
+
+    thumbnails.forEach(thumb => {
+        thumb.addEventListener('click', function () {
+            const fullSrc = this.getAttribute('data-full');
+            if (fullSrc) {
+                mainImage.src = fullSrc;
+                // Optional: smooth fade
+                mainImage.style.opacity = 0.5;
+                setTimeout(() => { mainImage.style.opacity = 1; }, 150);
+            }
+        });
+    });
+});
+</script>
+
+<!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Back to Top Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const backToTopBtn = document.getElementById('backToTop');
+
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 600) {    // Show after scrolling 400px
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        // Smooth scroll to top when clicked
+        backToTopBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Integrated Therapy - Detox Modulator Complex</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/apple-icon.png">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+
+    <!-- Slick -->
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
+    <style>
+        /* Make the product sidebar navigation match the site's green theme */
+        #product-nav .nav-link {
+            color: #28a745; /* theme green */
+            font-weight: 600;
+        }
+        #product-nav .nav-link:hover,
+        #product-nav .nav-link:focus,
+        #product-nav .nav-link.active {
+            color: #1e7e34; /* darker green on hover/active */
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Contact & Social Bar (kept visible on desktop) -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark d-none d-lg-block" id="templatemo_nav_top">
+        <div class="container text-light">
+            <div class="w-100 d-flex justify-content-between align-items-center">
+                <div>
+                    <i class="fa fa-envelope mx-2"></i>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:info@mcnutraceutical.co.uk">info@mcnutraceutical.co.uk</a>
+                    <i class="fa fa-phone mx-2"></i>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="tel:+447993349777">+44 799 334 9777</a>
+                </div>
+                <div class="social-links">
+                    <a class="text-light me-2" href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="text-light me-2" href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="text-light me-2" href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="text-light" href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Navigation - FIXED TOP -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand text-light fw-bold fs-3" href="index.html">
+                Integrated Therapy
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="templatemo_main_nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="templatemo_main_nav">
+                <ul class="navbar-nav mx-lg-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle text-light" 
+       href="pharmacy2.html" 
+       id="pharmacyDropdown" 
+       role="button" 
+       data-bs-toggle="dropdown" 
+       aria-expanded="false">
+        Pharmacy
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="pharmacyDropdown">
+        <!-- Add your dropdown items here -->
+        <li><a class="dropdown-item" href="pharmacy2.html">Main Pharmacy Page</a></li>
+        <li><a class="dropdown-item" href="medicines.html">Medicines</a></li>
+        <li><a class="dropdown-item" href="consultation.html">Online Consultation</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="contact-pharmacy.html">Contact Pharmacy</a></li>
+    </ul>
+</li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+
+                <!-- Icons & Search (right side) -->
+                <div class="d-flex align-items-center ms-lg-4">
+                    <!-- Search (desktop modal trigger) -->
+                    <a class="nav-icon d-none d-lg-inline me-3" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+                        <i class="fa fa-search text-light"></i>
+                    </a>
+
+                    <!-- Cart -->
+                    <a class="nav-icon position-relative text-decoration-none me-3" href="Cart.html">
+                        <i class="fa fa-cart-arrow-down text-light"></i>
+                        <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">0</span>
+                    </a>
+
+                    <!-- User -->
+                    <a class="nav-icon position-relative text-decoration-none" href="#">
+                        <i class="fa fa-user text-light"></i>
+                        <span id="user-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary" style="display:none;"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+<!-- End Header -->
+
+    <!-- Modal -->
+    <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="w-100 pt-1 mb-5 text-right">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="" method="get" class="modal-content modal-body border-0 p-0">
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+                    <button type="submit" class="input-group-text bg-success text-light">
+                        <i class="fa fa-fw fa-search text-white"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Open Content with modern navigation -->
+    <section class="bg-light" id="overview">
+        <div class="container pb-5">
+            <!-- Breadcrumbs -->
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb bg-transparent px-0">
+                    <li class="breadcrumb-item active" aria-current="page">Detox Modulator Complex</li>
+                </ol>
+            </nav>
+
+            <div class="row">
+                <!-- Sidebar navigation for large screens -->
+                <aside class="col-lg-2 d-none d-lg-block">
+                    <nav id="product-nav" class="position-sticky" style="top:120px;">
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link" href="#overview">Overview</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#description">Description</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#specs">Specifications</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+
+                <!-- Main content area -->
+                <div class="col-lg-10">
+                    <div class="row">
+                        <div class="col-md-5 mt-5">
+                            <div class="card mb-3">
+                                <img class="card-img img-fluid" src="assets/img/detox modulator complex.png" alt="Detox Modulator Complex" id="product-detail">
+                            </div>
+                        </div>
+                        <!-- end images column -->
+
+                        <div class="col-md-7 mt-5" id="overview">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h1 class="h2">Detox Modulator Complex</h1>
+                                    <p class="h3 py-2">£45.00</p>
+                                    <p class="py-2">
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-warning"></i>
+                                        <i class="fa fa-star text-secondary"></i>
+                                        <span class="list-inline-item text-dark">Rating 4.8 | 12 Comments</span>
+                                    </p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <h6>Brand:</h6>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <p class="text-muted"><strong>Integrated Therapy</strong></p>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Description section -->
+                    <section id="description" class="mt-4">
+                        <h2>Description</h2>
+                        <p><strong>DETOX MODULATOR COMPLEX (DMC)</strong><br>
+                        Detox modulator complex is a blend of organically grown and selected herbal tinctures personalised and tailored to one's needs. As there is no one fit blends for all, detox modulator complex is blended extemporaneously (freshly prepared on demand) following a clinical assessment with the advanced practitioner on a one-to-one basis through online, Skype, telephone consultation or otherwise.</p>
+                        <p>The science behind detoxification is very complex in its own context. Although there is no eliminatory system based on excretory function, many organs of the body eliminate waste products: digestive tract – faeces from the colon; the lungs – carbon dioxide; the skin – water and some toxins; the kidneys – urea; the liver – pesticide residues, metabolic by-products; pollution absorbed from the atmosphere, etc. Detoxification does not simply mean elimination of waste products, but deeply refers to regenerating body cells, tissues, organs, enzymes, immune defence systems, antioxidant capacity, lymphatic drainage, etc. All these functions have to take place at cellular levels and all in a coordinated manner.</p>
+                        <p>As the body is exposed to environmental insults, toxins, microbes, free radicals, pesticide residues, plastics, hormones, heavy metals, preservatives, medications, additives, fillers and other chemicals, the process of detoxification has got to be coordinated by a network of biological systems at cellular levels which involves every tissue and organ of the whole body. To mention just a few, the skin, lungs, stomach, intestines, lymph vessels, immune system, heart, liver, kidneys, brain, etc. This process is all embedded in a complex biological system called: NRF2/KEAP/ARE signaling pathways. The task is to identify natural activators that would trigger this complex to deliver its functions. This is where credits go to plants/herbs/food/spices which contain bioactive molecules with specific molecular structures which can biologically and chemically dock on the body system to set the ball rolling.</p>
+                        <p>The rational scientific concept that drives the selection of the specific herbs is based on knowing and understanding the bioactive components of the selected plants and assimilated insights to translate the application of redox biology in a living complex system like the human body. It involves the triggering of a cascade of biological complex structures based on chemical entities of the activators and the receptor complex, followed by a series of biological response elements in the signaling pathways.</p>
+                        <p>This pathway does not only facilitate quenching, neutralising, mopping, elimination, excreting, etc of waste products, but ultimately regenerate the natural antioxidant enzymes endogenously, and concurrently modulate the entire body immune system capacity to safeguard and protect the body as a whole. In fact, detoxification is a must do process in the lifestyle changes for health restoration, and assurance of wellness and vitality being. You can use this approach on a trimester basis, hence four times in a year.</p>
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <h6>Avaliable Form :</h6>
+                            </li>
+                            <li class="list-inline-item">
+                                <p class="text-muted"><strong>Capsules</strong></p>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <!-- Specifications -->
+                    <section id="specs" class="mt-4">
+                        <h2>Specifications</h2>
+                        <ul class="list-unstyled pb-3">
+                            <li>60 capsules per bottle</li>
+                            <li>Vegetarian formula</li>
+                            <li>No artificial colours or flavours</li>
+                            <li>Gluten free</li>
+                            <li>Made in the UK</li>
+                        </ul>
+                    </section>
+
+                    <!-- Purchase form remains inline -->
+                    <section class="mt-4">
+                        <div class="row">
+                            <div class="col-auto">
+                                <ul class="list-inline pb-3">
+                                    <li class="list-inline-item">Size :
+                                        <input type="hidden" name="product-size" id="product-size" value="Standard">
+                                    </li>
+                                    <li class="list-inline-item"><span class="btn btn-success btn-size">Standard</span></li>
+                                </ul>
+                            </div>
+                            <div class="col-auto">
+                                <ul class="list-inline pb-3">
+                                    <li class="list-inline-item text-right">
+                                        Quantity
+                                        <input type="hidden" name="product-quanity" id="product-quanity" value="1">
+                                    </li>
+                                    <li class="list-inline-item"><span class="btn btn-success" id="btn-minus">-</span></li>
+                                    <li class="list-inline-item"><span class="badge bg-secondary" id="var-value">1</span></li>
+                                    <li class="list-inline-item"><span class="btn btn-success" id="btn-plus">+</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row pb-3">
+                            <div class="col d-grid">
+                                <button type="button" class="btn btn-success btn-lg" onclick="window.location.href='checkout.html'">Buy</button>
+                            </div>
+                            <div class="col d-grid">
+                                <button type="button" class="btn btn-success btn-lg add-to-cart"
+                                        data-id="detox"
+                                        data-name="Detox Modulator Complex"
+                                        data-price="4800"
+                                        data-image="assets/img/shop_03.png">
+                                    Add To Cart
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Close Content -->
+
+    <!-- No related products section -->
+    <!-- Start Modern Footer -->
+<footer class="bg-dark text-light pt-5 pb-4" id="footer">
+    <div class="container">
+        <div class="row g-5">
+
+            <!-- Column 1: Brand & Contact -->
+            <div class="col-lg-4 col-md-6">
+                <h3 class="h3 fw-bold text-success mb-4">Integrated Therapy</h3>
+                <p class="text-white mb-4">
+                    Holistic wellness through integrated therapy, premium nutraceuticals, and personalized care.
+                </p>
+                <ul class="list-unstyled footer-contact">
+                    <li class="mb-3 text-white">
+                        <i class="fas fa-map-marker-alt me-3 text-success"></i>
+                        United Kingdom
+                    </li>
+                    <li class="mb-3">
+                        <i class="fas fa-phone-alt me-3 text-success"></i>
+                        <a href="tel:+(44)799-334-9777" class="text-light text-decoration-none">+(44)799-334-9777</a>
+                    </li>
+                    <li class="mb-3">
+                        <i class="fas fa-envelope me-3 text-success"></i>
+                        <a href="mailto:info@mcnutraceutical.co.uk" class="text-light text-decoration-none">info@mcnutraceutical.co.uk</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="col-lg-2 col-md-6">
+                <h5 class="fw-bold mb-4">Quick Links</h5>
+                <ul class="list-unstyled footer-links">
+                    <li class="mb-2"><a href="index.html" class="text-light text-decoration-none hover-link">Home</a></li>
+                    <li class="mb-2"><a href="about.html" class="text-light text-decoration-none hover-link">About Us</a></li>
+                    <li class="mb-2"><a href="pharmacy2.html" class="text-light text-decoration-none hover-link">Pharmacy</a></li>
+                    <li class="mb-2"><a href="about.html#services" class="text-light text-decoration-none hover-link">Services</a></li>
+                    <li class="mb-2"><a href="contact.html" class="text-light text-decoration-none hover-link">Contact</a></li>
+                    <li class="mb-2"><a href="ppolicy.html" class="text-light text-decoration-none hover-link">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Products -->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="fw-bold mb-4">Our Products</h5>
+                <ul class="list-unstyled footer-links">
+                    <li class="mb-2"><a href="vit-modulator-complex.html" class="text-light text-decoration-none hover-link">Vitamin D3 & K2</a></li>
+                    <li class="mb-2"><a href="magnesium-modulator-complex.html" class="text-light text-decoration-none hover-link">Magnesium Complex</a></li>
+                    <li class="mb-2"><a href="detox-protocol.html" class="text-light text-decoration-none hover-link">Detox Protocol</a></li>
+                    <li class="mb-2"><a href="selamino-modulator-complex.html" class="text-light text-decoration-none hover-link">Selamino</a></li>
+                    <li class="mb-2"><a href="detox-modulator-complex.html" class="text-light text-decoration-none hover-link">Detox Modulator Complex</a></li>
+                    <li class="mb-2"><a href="pharmacy2.html" class="text-light text-decoration-none hover-link">All Supplements</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Newsletter & Social -->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="fw-bold mb-4">Stay Updated</h5>
+                <p class="text-white mb-3">Subscribe to get health tips & exclusive offers.</p>
+                
+                <form id="newsletterForm" class="input-group mb-4">
+                    <input type="email" id="newsletterEmail" class="form-control bg-dark border-secondary text-success" placeholder="Your email" aria-label="Your email" required>
+                    <button class="btn btn-success" type="submit">Subscribe</button>
+                </form>
+                <div id="newsletterAlert" class="alert d-none alert-sm mb-3" role="alert" style="font-size: 0.85rem;"></div>
+
+                <h6 class="fw-bold mb-3">Follow Us</h6>
+                <div class="social-icons d-flex gap-3">
+                    <a href="http://facebook.com/" class="text-light fs-4 social-icon" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" class="text-light fs-4 social-icon" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/" class="text-light fs-4 social-icon" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" class="text-light fs-4 social-icon" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="bg-black py-4 mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="mb-0 text-white">
+                        © 2026 Integrated Therapy UK Ltd. All rights reserved.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0 text-muted">
+                        Designed & Developed by 
+                        <a href="https://otbpro.co.ug" target="_blank" class="text-success text-decoration-none">OTB PRO</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Modern Footer -->
+
+    <!-- Placeholder Text Color -->
+    <style>
+        #newsletterEmail::placeholder {
+            color: inherit !important;
+            opacity: 1;
+        }
+    </style>
+
+    <!-- Start Script -->
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/templatemo.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/cart.js"></script>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('mainNavbar');
+        if (navbar) {
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scroll');
+            } else {
+                navbar.classList.remove('navbar-scroll');
+            }
+        }
+    });
+
+    // Newsletter Form Handler
+    document.addEventListener('DOMContentLoaded', function() {
+        const newsletterForm = document.getElementById('newsletterForm');
+        const newsletterEmail = document.getElementById('newsletterEmail');
+        const newsletterAlert = document.getElementById('newsletterAlert');
+        const submitBtn = newsletterForm ? newsletterForm.querySelector('button[type="submit"]') : null;
+
+        if (!newsletterForm) return;
+
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const email = newsletterEmail.value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailRegex.test(email)) {
+                newsletterAlert.className = 'alert alert-danger mb-3';
+                newsletterAlert.textContent = 'Please enter a valid email address.';
+                newsletterAlert.classList.remove('d-none');
+                return;
+            }
+
+            const originalText = submitBtn.innerHTML;
+            const originalDisabled = submitBtn.disabled;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+
+            fetch('/newsletter', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email: email })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    newsletterAlert.className = 'alert alert-success mb-3';
+                    newsletterAlert.textContent = data.message;
+                    newsletterEmail.value = '';
+                } else {
+                    newsletterAlert.className = 'alert alert-warning mb-3';
+                    newsletterAlert.textContent = data.message;
+                }
+                newsletterAlert.classList.remove('d-none');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                newsletterAlert.className = 'alert alert-danger mb-3';
+                newsletterAlert.textContent = 'Error subscribing. Please try again later.';
+                newsletterAlert.classList.remove('d-none');
+            })
+            .finally(() => {
+                submitBtn.disabled = originalDisabled;
+                submitBtn.innerHTML = originalText;
+            });
+        });
+    });
+</script>
+    <!-- End Script -->
+
+<!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Back to Top Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const backToTopBtn = document.getElementById('backToTop');
+
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 600) {    // Show after scrolling 400px
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        // Smooth scroll to top when clicked
+        backToTopBtn.addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+
+</html>

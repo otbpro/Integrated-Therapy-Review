@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart – Integrated Therapy</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Use this in <head> instead of FA6 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Your custom & templatemo styles -->
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <style>
+        .cart-item:hover {
+            background-color: #f8f9fa;
+            transition: background-color 0.2s ease;
+        }
+        .quantity-btn {
+            width: 38px;
+            height: 38px;
+            line-height: 38px;
+            text-align: center;
+            border: 1px solid #dee2e6;
+            background: white;
+            cursor: pointer;
+        }
+        .quantity-btn:hover {
+            background: #e9ecef;
+        }
+        .table th, .table td {
+            vertical-align: middle;
+        }
+        .cart-summary {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 1.75rem;
+        }
+        .btn-checkout {
+            font-size: 1.15rem;
+            padding: 0.9rem 1.8rem;
+        }
+        .promo-input:focus {
+            border-color: #198754;
+            box-shadow: 0 0 0 0.25rem rgba(25,135,84,0.25);
+        }
+
+        /* Responsive cart table */
+        @media (max-width: 768px) {
+            .table-responsive {
+                border: none;
+            }
+            .cart-item {
+                display: block;
+                border: 1px solid #dee2e6;
+                border-radius: 8px;
+                margin-bottom: 1rem;
+                padding: 1rem;
+            }
+            .cart-item td {
+                display: block;
+                border: none;
+                padding: 0.5rem 0;
+                text-align: left !important;
+            }
+            .cart-item td:first-child {
+                padding-top: 0;
+            }
+            .cart-item td:last-child {
+                padding-bottom: 0;
+                text-align: center;
+            }
+            .quantity-btn {
+                width: 32px;
+                height: 32px;
+                font-size: 16px;
+                line-height: 30px;
+            }
+        }
+
+        /* Responsive product cards */
+        .product-card {
+            transition: transform 0.2s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Modern carousel styles */
+        .hover-lift {
+            transition: all 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        .carousel-indicators button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: none;
+            margin: 0 6px;
+        }
+
+        .carousel-indicators {
+            bottom: -50px;
+        }
+
+        /* Responsive carousel adjustments */
+        @media (max-width: 768px) {
+            .carousel-inner .row {
+                --bs-gutter-x: 1rem;
+            }
+            .carousel-control-prev,
+            .carousel-control-next {
+                display: none;
+            }
+        }
+        .product-image img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <!-- Navbar (use your fixed version from earlier) -->
+    <!-- Paste your improved fixed navbar here -->
+
+    <!-- Top Contact & Social Bar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark d-none d-lg-block" id="templatemo_nav_top">
+        <div class="container text-light">
+            <div class="w-100 d-flex justify-content-between align-items-center">
+                <div>
+                    <i class="fa fa-envelope mx-2"></i>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:info@mcnutraceutical.co.uk">info@mcnutraceutical.co.uk</a>
+                    <i class="fa fa-phone mx-2"></i>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="tel:+447993349777">+44 799 334 9777</a>
+                </div>
+                <div class="social-links">
+                    <a class="text-light me-2" href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="text-light me-2" href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="text-light me-2" href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="text-light" href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Navigation - FIXED TOP -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand text-light fw-bold fs-3" href="index.html">
+                Integrated Therapy
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="templatemo_main_nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="templatemo_main_nav">
+                <ul class="navbar-nav mx-lg-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="pharmacy2.html" id="pharmacyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Pharmacy
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="pharmacyDropdown">
+                            <li><a class="dropdown-item" href="pharmacy2.html">Main Pharmacy Page</a></li>
+                            <li><a class="dropdown-item" href="medicines.html">Medicines</a></li>
+                            <li><a class="dropdown-item" href="consultation.html">Online Consultation</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="contact-pharmacy.html">Contact Pharmacy</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+
+                <!-- Icons & Search (right side) -->
+                <div class="d-flex align-items-center ms-lg-4">
+                    <!-- Cart -->
+                    <a class="nav-icon position-relative text-decoration-none me-3" href="Cart.html">
+                        <i class="fa fa-cart-arrow-down text-light"></i>
+                        <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">0</span>
+                    </a>
+
+                    <!-- User -->
+                    <a class="nav-icon position-relative text-decoration-none" href="user-dashboard.html">
+                        <i class="fa fa-user text-light"></i>
+                        <span id="user-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary" style="display:none;"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <style>
+        body {
+            padding-top: 70px;
+        }
+        .navbar-scroll {
+            background-color: rgba(33, 37, 41, 0.95) !important;
+            backdrop-filter: blur(8px);
+        }
+    </style>
+
+    <!-- Main Cart Content -->
+    <section class="py-5">
+        <div class="container">
+
+            <!-- Page Title -->
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h1 class="display-5 fw-bold text-dark">Your Cart</h1>
+                    <p class="lead text-muted">Review and update your selected supplements</p>
+                </div>
+            </div>
+
+            <div class="row g-5">
+
+                <!-- Cart Items -->
+                <div class="col-lg-8">
+
+                    <!-- Cart Table -->
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-4">
+                        <div class="card-body p-0">                            <div id="cartDebug" class="alert alert-info m-3 d-none"></div>                            <div class="table-responsive">
+                                <table class="table table-borderless mb-0">
+                                    <thead class="bg-light border-bottom d-none d-md-table-header-group">
+                                        <tr>
+                                            <th class="ps-4 py-3">Product</th>
+                                            <th class="text-center py-3">Price</th>
+                                            <th class="text-center py-3">Quantity</th>
+                                            <th class="text-end pe-4 py-3">Subtotal</th>
+                                            <th class="py-3"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="cartItems">
+                                        <!-- Cart items will be loaded dynamically -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coupon / Continue Shopping -->
+                    <div class="d-flex flex-wrap justify-content-between gap-3 mb-5">
+                        <a href="pharmacy2.html" class="btn btn-outline-secondary btn-lg px-4">
+                            <i class="fas fa-arrow-left me-2"></i> Continue Shopping
+                        </a>
+
+                        <div class="input-group input-group-lg" style="max-width: 380px;">
+                            <input type="text" class="form-control promo-input" placeholder="Promo code">
+                            <button class="btn btn-outline-success px-4">Apply</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="col-lg-4">
+                    <div class="cart-summary shadow-sm">
+                        <h4 class="fw-bold mb-4">Order Summary</h4>
+
+                        <div id="orderSummary">
+                            <!-- Order summary will be loaded dynamically -->
+                        </div>
+
+                        <button id="checkoutBtn" class="btn btn-success btn-lg w-100 btn-checkout rounded-pill shadow d-none">
+                            <i class="fas fa-lock me-2"></i> Proceed to Checkout
+                        </button>
+
+                        <div id="emptyCartMessage" class="text-center py-4">
+                            <i class="fas fa-shopping-cart fa-3x text-muted mb-3"></i>
+                            <h5 class="text-muted">Your cart is empty</h5>
+                            <p class="text-muted">Add some products to get started</p>
+                            <a href="pharmacy2.html" class="btn btn-success btn-lg rounded-pill px-4">Browse Products</a>
+                        </div>
+
+                        <p class="text-center text-muted small mt-4 mb-0">
+                            Secure checkout • Fast delivery in United Kingdom
+                        </p>
+                    </div>
+
+                    <!-- Optional: Trust signals -->
+                    <div class="text-center mt-4">
+                        <img src="assets/img/payment-icons.png" alt="Payment methods" class="img-fluid" style="max-height: 40px;">
+                        <a href="#" class="d-block mt-3 text-decoration-none text-muted">
+                            <i class="fas fa-shield-alt me-1"></i> 100% Secure Checkout
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Frequently Bought Together -->
+<section class="bg-light py-5">
+    <div class="container">
+        <h3 class="text-center fw-bold mb-4">Frequently Bought Together</h3>
+        <p class="text-center text-muted mb-5">Customers who bought these items also purchased</p>
+
+        <!-- Modern Product Carousel -->
+        <div id="frequentlyBoughtCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card h-100 border-0 shadow-sm hover-lift">
+                                <div class="card-body text-center p-4">
+                                    <div class="product-image mb-3">
+                                        <img src="assets/img/vit d3 & k2 modulator complex.png" alt="Vitamin D3 & K2 Modulator Complex" class="img-fluid rounded-3" style="max-height: 200px; object-fit: cover;">
+                                    </div>
+                                    <h6 class="card-title fw-bold mb-2">Vitamin D3 & K2 Modulator Complex</h6>
+                                    <div class="d-flex justify-content-center mb-2">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="far fa-star text-warning"></i>
+                                        <span class="text-muted ms-2 small">(42)</span>
+                                    </div>
+                                    <p class="text-success fw-bold fs-5 mb-3">£48.00</p>
+                                    <button class="btn btn-success btn-sm rounded-pill px-3 add-to-cart"
+                                            data-id="vitd3k2"
+                                            data-name="Vitamin D3 & K2 Modulator Complex"
+                                            data-price="4800"
+                                            data-image="assets/img/vit d3 & k2 modulator complex.png">
+                                        <i class="fas fa-cart-plus me-1"></i> Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card h-100 border-0 shadow-sm hover-lift">
+                                <div class="card-body text-center p-4">
+                                    <div class="product-image mb-3">
+                                        <img src="assets/img/selamino modulator complex.png" alt="Selamino Modulator Complex" class="img-fluid rounded-3" style="max-height: 200px; object-fit: cover;">
+                                    </div>
+                                    <h6 class="card-title fw-bold mb-2">Selamino Modulator Complex</h6>
+                                    <div class="d-flex justify-content-center mb-2">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                        <span class="text-muted ms-2 small">(19)</span>
+                                    </div>
+                                    <p class="text-success fw-bold fs-5 mb-3">£48.00</p>
+                                    <button class="btn btn-success btn-sm rounded-pill px-3 add-to-cart"
+                                            data-id="selamino"
+                                            data-name="Selamino Modulator Complex"
+                                            data-price="4800"
+                                            data-image="assets/img/selamino modulator complex.png">
+                                        <i class="fas fa-cart-plus me-1"></i> Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card h-100 border-0 shadow-sm hover-lift">
+                                <div class="card-body text-center p-4">
+                                    <div class="product-image mb-3">
+                                        <img src="assets/img/detox modulator complex.png" alt="Detox Modulator Complex" class="img-fluid rounded-3" style="max-height: 200px; object-fit: cover;">
+                                    </div>
+                                    <h6 class="card-title fw-bold mb-2">Detox Modulator Complex</h6>
+                                    <div class="d-flex justify-content-center mb-2">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="far fa-star text-warning"></i>
+                                        <span class="text-muted ms-2 small">(42)</span>
+                                    </div>
+                                    <p class="text-success fw-bold fs-5 mb-3">£48.00</p>
+                                    <button class="btn btn-success btn-sm rounded-pill px-3 add-to-cart"
+                                            data-id="detox"
+                                            data-name="Detox Modulator Complex"
+                                            data-price="4800"
+                                            data-image="assets/img/shop_03.png">
+                                        <i class="fas fa-cart-plus me-1"></i> Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card h-100 border-0 shadow-sm hover-lift">
+                                <div class="card-body text-center p-4">
+                                    <div class="product-image mb-3">
+                                        <img src="assets/img/magnesium modulator complex.png" alt="Magnesium Modulator Complex" class="img-fluid rounded-3" style="max-height: 200px; object-fit: cover;">
+                                    </div>
+                                    <h6 class="card-title fw-bold mb-2">Magnesium Modulator Complex</h6>
+                                    <div class="d-flex justify-content-center mb-2">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="far fa-star text-warning"></i>
+                                        <span class="text-muted ms-2 small">(42)</span>
+                                    </div>
+                                    <p class="text-success fw-bold fs-5 mb-3">£48.00</p>
+                                    <button class="btn btn-success btn-sm rounded-pill px-3 add-to-cart"
+                                            data-id="magnesium"
+                                            data-name="Magnesium Modulator Complex"
+                                            data-price="4800"
+                                            data-image="assets/img/shop_04.png">
+                                        <i class="fas fa-cart-plus me-1"></i> Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card h-100 border-0 shadow-sm hover-lift">
+                                <div class="card-body text-center p-4">
+                                    <div class="product-image mb-3">
+                                        <img src="assets/img/detox protocol.png" alt="Detox Protocol" class="img-fluid rounded-3" style="max-height: 200px; object-fit: cover;">
+                                    </div>
+                                    <h6 class="card-title fw-bold mb-2">Detox Protocol</h6>
+                                    <div class="d-flex justify-content-center mb-2">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="far fa-star text-warning"></i>
+                                        <span class="text-muted ms-2 small">(42)</span>
+                                    </div>
+                                    <p class="text-success fw-bold fs-5 mb-3">£48.00</p>
+                                    <button class="btn btn-success btn-sm rounded-pill px-3 add-to-cart"
+                                            data-id="detox_protocol"
+                                            data-name="Detox Protocol"
+                                            data-price="4800"
+                                            data-image="assets/img/shop_05.png">
+                                        <i class="fas fa-cart-plus me-1"></i> Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card h-100 border-0 shadow-sm hover-lift">
+                                <div class="card-body text-center p-4">
+                                    <div class="product-image mb-3">
+                                        <img src="assets/img/tumeric modulator complex.png" alt="Tumeric Modulator Complex" class="img-fluid rounded-3" style="max-height: 200px; object-fit: cover;">
+                                    </div>
+                                    <h6 class="card-title fw-bold mb-2">Tumeric Modulator Complex</h6>
+                                    <div class="d-flex justify-content-center mb-2">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="far fa-star text-warning"></i>
+                                        <span class="text-muted ms-2 small">(42)</span>
+                                    </div>
+                                    <p class="text-success fw-bold fs-5 mb-3">£48.00</p>
+                                    <button class="btn btn-success btn-sm rounded-pill px-3 add-to-cart"
+                                            data-id="tumeric"
+                                            data-name="Tumeric Modulator Complex"
+                                            data-price="4800"
+                                            data-image="assets/img/shop_06.png">
+                                        <i class="fas fa-cart-plus me-1"></i> Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card h-100 border-0 shadow-sm hover-lift">
+                                <div class="card-body text-center p-4">
+                                    <div class="product-image mb-3">
+                                        <img src="assets/img/zinc modulator complex.png" alt="Zinc Modulator Complex" class="img-fluid rounded-3" style="max-height: 200px; object-fit: cover;">
+                                    </div>
+                                    <h6 class="card-title fw-bold mb-2">Zinc Modulator Complex</h6>
+                                    <div class="d-flex justify-content-center mb-2">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="far fa-star text-warning"></i>
+                                        <span class="text-muted ms-2 small">(42)</span>
+                                    </div>
+                                    <p class="text-success fw-bold fs-5 mb-3">£48.00</p>
+                                    <button class="btn btn-success btn-sm rounded-pill px-3 add-to-cart"
+                                            data-id="zinc"
+                                            data-name="Zinc Modulator Complex"
+                                            data-price="4800"
+                                            data-image="assets/img/shop_07.png">
+                                        <i class="fas fa-cart-plus me-1"></i> Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Duplicate first product for visual balance -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card h-100 border-0 shadow-sm hover-lift">
+                                <div class="card-body text-center p-4">
+                                    <div class="product-image mb-3">
+                                        <img src="assets/img/vit d3 & k2 modulator complex.png" alt="Vitamin D3 & K2 Modulator Complex" class="img-fluid rounded-3" style="max-height: 200px; object-fit: cover;">
+                                    </div>
+                                    <h6 class="card-title fw-bold mb-2">Vitamin D3 & K2 Modulator Complex</h6>
+                                    <div class="d-flex justify-content-center mb-2">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="far fa-star text-warning"></i>
+                                        <span class="text-muted ms-2 small">(42)</span>
+                                    </div>
+                                    <p class="text-success fw-bold fs-5 mb-3">£48.00</p>
+                                    <button class="btn btn-success btn-sm rounded-pill px-3 add-to-cart"
+                                            data-id="vitd3k2"
+                                            data-name="Vitamin D3 & K2 Modulator Complex"
+                                            data-price="4800"
+                                            data-image="assets/img/vit d3 & k2 modulator complex.png">
+                                        <i class="fas fa-cart-plus me-1"></i> Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card h-100 border-0 shadow-sm hover-lift">
+                                <div class="card-body text-center p-4">
+                                    <div class="product-image mb-3">
+                                        <img src="assets/img/selamino modulator complex.png" alt="Selamino Modulator Complex" class="img-fluid rounded-3" style="max-height: 200px; object-fit: cover;">
+                                    </div>
+                                    <h6 class="card-title fw-bold mb-2">Selamino Modulator Complex</h6>
+                                    <div class="d-flex justify-content-center mb-2">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                        <span class="text-muted ms-2 small">(19)</span>
+                                    </div>
+                                    <p class="text-success fw-bold fs-5 mb-3">£48.00</p>
+                                    <button class="btn btn-success btn-sm rounded-pill px-3 add-to-cart"
+                                            data-id="selamino"
+                                            data-name="Selamino Modulator Complex"
+                                            data-price="4800"
+                                            data-image="assets/img/selamino modulator complex.png">
+                                        <i class="fas fa-cart-plus me-1"></i> Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#frequentlyBoughtCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-success rounded-circle p-3" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#frequentlyBoughtCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-success rounded-circle p-3" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators mt-4">
+                <button type="button" data-bs-target="#frequentlyBoughtCarousel" data-bs-slide-to="0" class="active bg-success" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#frequentlyBoughtCarousel" data-bs-slide-to="1" class="bg-success" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#frequentlyBoughtCarousel" data-bs-slide-to="2" class="bg-success" aria-label="Slide 3"></button>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Start Modern Footer -->
+<footer class="bg-dark text-light pt-5 pb-4" id="footer">
+    <div class="container">
+        <div class="row g-5">
+
+            <!-- Column 1: Brand & Contact -->
+            <div class="col-lg-4 col-md-6">
+                <h3 class="h3 fw-bold text-success mb-4">Integrated Therapy</h3>
+                <p class="text-white mb-4">
+                    Holistic wellness through integrated therapy, premium nutraceuticals, and personalized care.
+                </p>
+                <ul class="list-unstyled footer-contact">
+                    <li class="mb-3 text-white">
+                        <i class="fas fa-map-marker-alt me-3 text-success"></i>
+                        United Kingdom
+                    </li>
+                    <li class="mb-3">
+                        <i class="fas fa-phone-alt me-3 text-success"></i>
+                        <a href="tel:+(44)799-334-9777" class="text-light text-decoration-none">+(44)799-334-9777</a>
+                    </li>
+                    <li class="mb-3">
+                        <i class="fas fa-envelope me-3 text-success"></i>
+                        <a href="mailto:info@mcnutraceutical.co.uk" class="text-light text-decoration-none">info@mcnutraceutical.co.uk</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="col-lg-2 col-md-6">
+                <h5 class="fw-bold mb-4">Quick Links</h5>
+                <ul class="list-unstyled footer-links">
+                    <li class="mb-2"><a href="index.html" class="text-light text-decoration-none hover-link">Home</a></li>
+                    <li class="mb-2"><a href="about.html" class="text-light text-decoration-none hover-link">About Us</a></li>
+                    <li class="mb-2"><a href="pharmacy2.html" class="text-light text-decoration-none hover-link">Pharmacy</a></li>
+                    <li class="mb-2"><a href="about.html#services" class="text-light text-decoration-none hover-link">Services</a></li>
+                    <li class="mb-2"><a href="contact.html" class="text-light text-decoration-none hover-link">Contact</a></li>
+                    <li class="mb-2"><a href="ppolicy.html" class="text-light text-decoration-none hover-link">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Products -->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="fw-bold mb-4">Our Products</h5>
+                <ul class="list-unstyled footer-links">
+                    <li class="mb-2"><a href="vit-modulator-complex.html" class="text-light text-decoration-none hover-link">Vitamin D3 & K2</a></li>
+                    <li class="mb-2"><a href="magnesium-modulator-complex.html" class="text-light text-decoration-none hover-link">Magnesium Complex</a></li>
+                    <li class="mb-2"><a href="detox-protocol.html" class="text-light text-decoration-none hover-link">Detox Protocol</a></li>
+                    <li class="mb-2"><a href="selamino-modulator-complex.html" class="text-light text-decoration-none hover-link">Selamino</a></li>
+                    <li class="mb-2"><a href="detox-modulator-complex.html" class="text-light text-decoration-none hover-link">Detox Modulator Complex</a></li>
+                    <li class="mb-2"><a href="pharmacy2.html" class="text-light text-decoration-none hover-link">All Supplements</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Newsletter & Social -->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="fw-bold mb-4">Stay Updated</h5>
+                <p class="text-white mb-3">Subscribe to get health tips & exclusive offers.</p>
+                
+                <form id="newsletterForm" class="input-group mb-4">
+                    <input type="email" id="newsletterEmail" class="form-control bg-dark border-secondary text-success" placeholder="Your email" aria-label="Your email" required>
+                    <button class="btn btn-success" type="submit">Subscribe</button>
+                </form>
+                <div id="newsletterAlert" class="alert d-none alert-sm mb-3" role="alert" style="font-size: 0.85rem;"></div>
+
+                <h6 class="fw-bold mb-3">Follow Us</h6>
+                <div class="social-icons d-flex gap-3">
+                    <a href="http://facebook.com/" class="text-light fs-4 social-icon" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" class="text-light fs-4 social-icon" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/" class="text-light fs-4 social-icon" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" class="text-light fs-4 social-icon" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="bg-black py-4 mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="mb-0 text-white">
+                        © 2026 Integrated Therapy UK Ltd. All rights reserved.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0 text-muted">
+                        Designed & Developed by 
+                        <a href="https://otbpro.co.ug" target="_blank" class="text-success text-decoration-none">OTB PRO</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Modern Footer -->
+
+    <!-- Placeholder Text Color -->
+    <style>
+        #newsletterEmail::placeholder {
+            color: inherit !important;
+            opacity: 1;
+        }
+    </style>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script>
+        // Initialize cart page functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Navbar scroll effect (kept outside click handler)
+            window.addEventListener('scroll', function() {
+                const navbar = document.getElementById('mainNavbar');
+                if (window.scrollY > 50) {
+                    navbar.classList.add('navbar-scroll');
+                } else {
+                    navbar.classList.remove('navbar-scroll');
+                }
+            });
+
+            // Setup checkout button
+            const checkoutBtn = document.getElementById('checkoutBtn');
+            if (checkoutBtn) {
+                checkoutBtn.addEventListener('click', function() {
+                    const cartData = getCart();
+                    if (cartData && cartData.length > 0) {
+                        console.log('Proceeding to checkout with', cartData.length, 'items');
+                        // make sure latest cart is written
+                        try { saveCart(); } catch (e) { console.warn('saveCart failed before redirect', e); }
+                        // slight delay to ensure storage flush
+                        setTimeout(() => {
+                            window.location.href = 'checkout.html';
+                        }, 50);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Integrated Therapy - Book Your Consultation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/apple-icon.png">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+</head>
+
+<body>
+    <!-- Top Contact & Social Bar (kept visible on desktop) -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark d-none d-lg-block" id="templatemo_nav_top">
+        <div class="container text-light">
+            <div class="w-100 d-flex justify-content-between align-items-center">
+                <div>
+                    <i class="fa fa-envelope mx-2"></i>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:info@mcnutraceutical.co.uk">info@mcnutraceutical.co.uk</a>
+                    <i class="fa fa-phone mx-2"></i>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="tel:+447993349777">+44 799 334 9777</a>
+                </div>
+                <div class="social-links">
+                    <a class="text-light me-2" href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="text-light me-2" href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="text-light me-2" href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="text-light" href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Navigation - FIXED TOP -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand text-light fw-bold fs-3" href="index.html">
+                Integrated Therapy
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="templatemo_main_nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="templatemo_main_nav">
+                <ul class="navbar-nav mx-lg-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle text-light" 
+       href="pharmacy2.html" 
+       id="pharmacyDropdown" 
+       role="button" 
+       data-bs-toggle="dropdown" 
+       aria-expanded="false">
+        Pharmacy
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="pharmacyDropdown">
+        <!-- Add your dropdown items here -->
+        <li><a class="dropdown-item" href="pharmacy2.html">Main Pharmacy Page</a></li>
+        <li><a class="dropdown-item" href="medicines.html">Medicines</a></li>
+        <li><a class="dropdown-item" href="consultation.html">Online Consultation</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="contact-pharmacy.html">Contact Pharmacy</a></li>
+    </ul>
+</li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+
+                <!-- Icons & Search (right side) -->
+                <div class="d-flex align-items-center ms-lg-4">
+                    <!-- Search (desktop modal trigger) -->
+                    <a class="nav-icon d-none d-lg-inline me-3" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+                        <i class="fa fa-search text-light"></i>
+                    </a>
+
+                    <!-- Cart -->
+                    <a class="nav-icon position-relative text-decoration-none me-3" href="Cart.html">
+                        <i class="fa fa-cart-arrow-down text-light"></i>
+                        <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">0</span>
+                    </a>
+
+                    <!-- User -->
+                    <a class="nav-icon position-relative text-decoration-none" href="#">
+                        <i class="fa fa-user text-light"></i>
+                        <span id="user-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary" style="display:none;"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+<!-- End Header -->
+
+    <!-- Modal -->
+    <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="w-100 pt-1 mb-5 text-right">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="" method="get" class="modal-content modal-body border-0 p-0">
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+                    <button type="submit" class="input-group-text bg-success text-light">
+                        <i class="fa fa-fw fa-search text-white"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <section class="bg-success py-5">
+        <div class="container">
+            <div class="row align-items-center py-5">
+                <div class="col-md-8 text-white">
+                    <h1>FORMULATION SERVICES</h1>
+                    <p>
+                        We do formulate our own supplements through contract manufacturing with reputable manufactures. 
+                        At the same time, we do resource quality health and beauty products with potential benefits tailored to individual needs. 
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <img src="assets/img/about-hero.svg" alt="About Hero">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Close Banner -->
+
+    <!-- Start Book Consultation Section -->
+<section class="book-consultation py-5 bg-white">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-9 col-xl-8">
+
+                <!-- Header -->
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold text-success mb-3">Book Your Consultation</h2>
+                    <p class="lead text-muted">
+                        Speak directly with our expert team led by Dr. John Osuku Opio.  
+                        Get personalized guidance on custom formulations, supplement plans, lab interpretation, or your health goals.
+                    </p>
+                </div>
+
+                <!-- Booking Form -->
+                <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+                    <div class="card-body p-4 p-md-5">
+
+                        <form id="consultationForm" action="/submit-consultation" method="POST" novalidate>
+
+                            <!-- Full Name -->
+                            <div class="mb-4">
+                                <label for="fullName" class="form-label fw-bold">Full Name <span class="text-danger">*</span></label>
+                                <input 
+                                    type="text" 
+                                    class="form-control form-control-lg" 
+                                    id="fullName" 
+                                    name="full_name" 
+                                    placeholder="Enter your full name" 
+                                    required
+                                >
+                                <div class="invalid-feedback">
+                                    Please enter your full name.
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="mb-4">
+                                <label for="email" class="form-label fw-bold">Email Address <span class="text-danger">*</span></label>
+                                <input 
+                                    type="email" 
+                                    class="form-control form-control-lg" 
+                                    id="email" 
+                                    name="email" 
+                                    placeholder="your.email@example.com" 
+                                    required
+                                >
+                                <div class="invalid-feedback">
+                                    Please provide a valid email address.
+                                </div>
+                            </div>
+
+                            <!-- Phone (optional but recommended) -->
+                            <div class="mb-4">
+                                <label for="phone" class="form-label fw-bold">Phone Number</label>
+                                <input 
+                                    type="tel" 
+                                    class="form-control form-control-lg" 
+                                    id="phone" 
+                                    name="phone" 
+                                    placeholder="+256 7XX XXX XXX" 
+                                >
+                            </div>
+
+                            <!-- Preferred Date -->
+                            <div class="mb-4">
+                                <label for="preferredDate" class="form-label fw-bold">Preferred Date <span class="text-danger">*</span></label>
+                                <input 
+                                    type="date" 
+                                    class="form-control form-control-lg" 
+                                    id="preferredDate" 
+                                    name="preferred_date" 
+                                    min="" 
+                                    required
+                                >
+                                <div class="invalid-feedback">
+                                    Please select a preferred date.
+                                </div>
+                            </div>
+
+                            <!-- Preferred Time -->
+                            <div class="mb-4">
+                                <label for="preferredTime" class="form-label fw-bold">Preferred Time <span class="text-danger">*</span></label>
+                                <select class="form-select form-select-lg" id="preferredTime" name="preferred_time" required>
+                                    <option value="" selected disabled>Select a time slot</option>
+                                    <option value="09:00-10:00">09:00 - 10:00 AM</option>
+                                    <option value="10:00-11:00">10:00 - 11:00 AM</option>
+                                    <option value="11:00-12:00">11:00 - 12:00 PM</option>
+                                    <option value="14:00-15:00">02:00 - 03:00 PM</option>
+                                    <option value="15:00-16:00">03:00 - 04:00 PM</option>
+                                    <option value="16:00-17:00">04:00 - 05:00 PM</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please choose a preferred time.
+                                </div>
+                            </div>
+
+                            <!-- Consultation Type -->
+                            <div class="mb-4">
+                                <label class="form-label fw-bold">Consultation Type <span class="text-danger">*</span></label>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-check form-check-lg">
+                                            <input class="form-check-input" type="radio" name="consult_type" id="formulation" value="formulation" required>
+                                            <label class="form-check-label" for="formulation">Custom Formulation / Product Development</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-check form-check-lg">
+                                            <input class="form-check-input" type="radio" name="consult_type" id="health" value="health">
+                                            <label class="form-check-label" for="health">Health & Wellness Coaching</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-check form-check-lg">
+                                            <input class="form-check-input" type="radio" name="consult_type" id="lab" value="lab">
+                                            <label class="form-check-label" for="lab">Lab Results Interpretation</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-check form-check-lg">
+                                            <input class="form-check-input" type="radio" name="consult_type" id="general" value="general">
+                                            <label class="form-check-label" for="general">General Consultation</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="invalid-feedback d-block">
+                                    Please select the type of consultation.
+                                </div>
+                            </div>
+
+                            <!-- Message / Notes -->
+                            <div class="mb-4">
+                                <label for="message" class="form-label fw-bold">Additional Notes / Questions</label>
+                                <textarea 
+                                    class="form-control form-control-lg" 
+                                    id="message" 
+                                    name="message" 
+                                    rows="4" 
+                                    placeholder="Tell us more about your goals, current health concerns, or specific products you're interested in..."
+                                ></textarea>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="d-grid mt-5">
+                                <button 
+                                    type="submit" 
+                                    class="btn btn-success btn-lg py-3 fw-bold"
+                                    id="submitBtn"
+                                >
+                                    <i class="fas fa-calendar-check me-2"></i> Book Consultation Now
+                                </button>
+                            </div>
+
+                            <!-- Form Feedback -->
+                            <div id="formMessage" class="mt-4 text-center fw-bold" style="display: none;"></div>
+
+                        </form>
+
+                    </div>
+                </div>
+
+                <!-- Trust signals -->
+                <div class="text-center mt-5 text-muted small">
+                    <p>We respect your privacy — your information is secure and will only be used to schedule your consultation.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Book Consultation Section -->
+
+    <!-- Start Modern Footer -->
+<footer class="bg-dark text-light pt-5 pb-4" id="footer">
+    <div class="container">
+        <div class="row g-5">
+
+            <!-- Column 1: Brand & Contact -->
+            <div class="col-lg-4 col-md-6">
+                <h3 class="h3 fw-bold text-success mb-4">Integrated Therapy</h3>
+                <p class="text-white mb-4">
+                    Holistic wellness through integrated therapy, premium nutraceuticals, and personalized care.
+                </p>
+                <ul class="list-unstyled footer-contact">
+                    <li class="mb-3">
+                        <i class="fas fa-map-marker-alt me-3 text-success"></i>
+                        United Kingdom
+                    </li>
+                    <li class="mb-3">
+                        <i class="fas fa-phone-alt me-3 text-success"></i>
+                        <a href="tel:+(44)799-334-9777" class="text-light text-decoration-none">+(44)799-334-9777</a>
+                    </li>
+                    <li class="mb-3">
+                        <i class="fas fa-envelope me-3 text-success"></i>
+                        <a href="mailto:info@mcnutraceutical.co.uk" class="text-light text-decoration-none">info@mcnutraceutical.co.uk</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="col-lg-2 col-md-6">
+                <h5 class="fw-bold mb-4">Quick Links</h5>
+                <ul class="list-unstyled footer-links">
+                    <li class="mb-2"><a href="index.html" class="text-light text-decoration-none hover-link">Home</a></li>
+                    <li class="mb-2"><a href="about.html" class="text-light text-decoration-none hover-link">About Us</a></li>
+                    <li class="mb-2"><a href="pharmacy2.html" class="text-light text-decoration-none hover-link">Pharmacy</a></li>
+                    <li class="mb-2"><a href="about.html#services" class="text-light text-decoration-none hover-link">Services</a></li>
+                    <li class="mb-2"><a href="contact.html" class="text-light text-decoration-none hover-link">Contact</a></li>
+                    <li class="mb-2"><a href="ppolicy.html" class="text-light text-decoration-none hover-link">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Products -->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="fw-bold mb-4">Our Products</h5>
+                <ul class="list-unstyled footer-links">
+                    <li class="mb-2"><a href="vit-modulator-complex.html" class="text-light text-decoration-none hover-link">Vitamin D3 & K2</a></li>
+                    <li class="mb-2"><a href="magnesium-modulator-complex.html" class="text-light text-decoration-none hover-link">Magnesium Complex</a></li>
+                    <li class="mb-2"><a href="detox-protocol.html" class="text-light text-decoration-none hover-link">Detox Protocol</a></li>
+                    <li class="mb-2"><a href="selamino-modulator-complex.html" class="text-light text-decoration-none hover-link">Selamino</a></li>
+                    <li class="mb-2"><a href="detox-modulator-complex.html" class="text-light text-decoration-none hover-link">Detox Modulator Complex</a></li>
+                    <li class="mb-2"><a href="pharmacy2.html" class="text-light text-decoration-none hover-link">All Supplements</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Newsletter & Social -->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="fw-bold mb-4">Stay Updated</h5>
+                <p class="text-muted mb-3">Subscribe to get health tips & exclusive offers.</p>
+                
+                <form class="input-group mb-4">
+                    <input type="email" class="form-control bg-dark border-secondary text-light" placeholder="Your email" aria-label="Your email" required>
+                    <button class="btn btn-success" type="submit">Subscribe</button>
+                </form>
+
+                <h6 class="fw-bold mb-3">Follow Us</h6>
+                <div class="social-icons d-flex gap-3">
+                    <a href="http://facebook.com/" class="text-light fs-4 social-icon" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" class="text-light fs-4 social-icon" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/" class="text-light fs-4 social-icon" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" class="text-light fs-4 social-icon" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="bg-black py-4 mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="mb-0 text-muted">
+                        © 2026 Integrated Therapy UK Ltd. All rights reserved.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0 text-muted">
+                        Designed & Developed by 
+                        <a href="https://otbpro.co.ug" target="_blank" class="text-success text-decoration-none">OTB PRO</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Modern Footer -->
+
+    <!-- Start Script -->
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/templatemo.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <!-- End Script -->
+     <script>
+document.getElementById('consultationForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const form = this;
+    const submitBtn = document.getElementById('submitBtn');
+    const messageDiv = document.getElementById('formMessage');
+
+    // Basic browser validation
+    if (!form.checkValidity()) {
+        e.stopPropagation();
+        form.classList.add('was-validated');
+        return;
+    }
+
+    // Simulate sending (replace with real fetch/AJAX later)
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span> Sending...';
+
+    setTimeout(() => {
+        // Success simulation
+        messageDiv.style.display = 'block';
+        messageDiv.className = 'mt-4 text-center fw-bold text-success';
+        messageDiv.textContent = 'Thank you! Your consultation request has been received. We will contact you shortly.';
+
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="fas fa-calendar-check me-2"></i> Book Consultation Now';
+
+        form.reset();
+        form.classList.remove('was-validated');
+    }, 1500);
+});
+</script>
+
+<!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Back to Top Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const backToTopBtn = document.getElementById('backToTop');
+
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 600) {    // Show after scrolling 400px
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        // Smooth scroll to top when clicked
+        backToTopBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+
+</html>
