@@ -1,5 +1,15 @@
 // Sample products data (you can move this to a separate file later)
 const products = [
+
+// Escape HTML to prevent XSS when inserting user-controlled values via innerHTML
+function escHtml(str) {
+    return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
     {
         id: "detox1",
         name: "Detox Protocol",
@@ -133,13 +143,15 @@ function renderCart() {
     let html = '';
     cartData.forEach((item, index) => {
         const itemTotal = item.price * item.quantity;
+        const safeName = escHtml(item.name);
+        const safeImage = escHtml(item.image);
         html += `
             <tr class="cart-item border-bottom">
                 <td class="ps-4 py-4">
                     <div class="d-flex align-items-center flex-wrap">
-                        <img src="${item.image}" alt="${item.name}" class="me-3 rounded mb-2 mb-md-0" style="width: 60px; height: 60px; object-fit: cover;">
+                        <img src="${safeImage}" alt="${safeName}" class="me-3 rounded mb-2 mb-md-0" style="width: 60px; height: 60px; object-fit: cover;">
                         <div class="flex-grow-1">
-                            <h6 class="mb-1 fw-bold">${item.name}</h6>
+                            <h6 class="mb-1 fw-bold">${safeName}</h6>
                             <small class="text-muted d-block d-md-none">Price: ${formatPrice(item.price)}</small>
                             <small class="text-muted d-block d-md-none">Qty: ${item.quantity}</small>
                         </div>
@@ -322,6 +334,7 @@ function updateUserBadge() {
 // ────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
     reloadCart();
+    renderProducts();
     updateCartCount();
     updateUserBadge();
 
@@ -342,11 +355,4 @@ document.addEventListener('click', e => {
             btn.dataset.image
         );
     }
-});
-
-// Init on page load
-document.addEventListener('DOMContentLoaded', () => {
-    renderProducts();       // comment out if keeping static HTML
-    updateCartCount();
-    updateUserBadge();
 });
